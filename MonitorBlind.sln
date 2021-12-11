@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorBlind", "ImageTracer\MonitorBlind.csproj", "{D22617E1-780C-4A02-A200-55B190065369}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonitorBlind", "MonitorBlind\MonitorBlind.csproj", "{D22617E1-780C-4A02-A200-55B190065369}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MonitorBlindSetup", "ImageTracerSetup\ImageTracerSetup.vdproj", "{EF4E2EB2-5FEF-4607-895B-B311E716D40D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MonitorBlindSetup", "MonitorBlindSetup\MonitorBlindSetup.vdproj", "{EF4E2EB2-5FEF-4607-895B-B311E716D40D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
