@@ -1,8 +1,8 @@
-# image-tracer
-PC画面上に画像を半透明で直接表示するツール。
+# monitor-blind
+PC画面の一部をマウス操作できないようにカバーしてしまうアプリ。
 
 # 紹介サイト
-[// もちぶろ - 画像半蔵](https://slash-mochi.net/?p=2834)
+近日作成予定
 
 # ソースコード
-[https://github.com/kusa-mochi/image-tracer](https://github.com/kusa-mochi/image-tracer)
+[https://github.com/kusa-mochi/monitor-blind](https://github.com/kusa-mochi/monitor-blind)
