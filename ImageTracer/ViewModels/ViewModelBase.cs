@@ -8,9 +8,9 @@ using System.Windows;
 using Livet;
 using Livet.Messaging;
 
-using ImageTracer;
+using MonitorBlind;
 
-namespace ImageTracer.ViewModels
+namespace MonitorBlind.ViewModels
 {
     public class ViewModelBase : ViewModel
     {

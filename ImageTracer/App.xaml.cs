@@ -7,9 +7,9 @@ using System.Windows;
 
 using Livet;
 
-using ImageTracer.SystemTray;
+using MonitorBlind.SystemTray;
 
-namespace ImageTracer
+namespace MonitorBlind
 {
     /// <summary>
     /// App.xaml の相互作用ロジック

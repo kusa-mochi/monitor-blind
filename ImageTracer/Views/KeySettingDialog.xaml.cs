@@ -12,9 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using ImageTracer.ViewModels;
+using MonitorBlind.ViewModels;
 
-namespace ImageTracer.Views
+namespace MonitorBlind.Views
 {
     /// <summary>
     /// KeySettingDialog.xaml の相互作用ロジック

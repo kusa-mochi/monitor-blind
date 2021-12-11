@@ -1,4 +1,4 @@
-﻿namespace ImageTracer.SystemTray
+﻿namespace MonitorBlind.SystemTray
 {
     partial class NotifyIconWrapper
     {

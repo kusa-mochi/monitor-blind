@@ -16,10 +16,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
-using ImageTracer.Common;
-using ImageTracer.ViewModels;
+using MonitorBlind.Common;
+using MonitorBlind.ViewModels;
 
-namespace ImageTracer.Views
+namespace MonitorBlind.Views
 {
     /* 
 	 * ViewModelからの変更通知などの各種イベントを受け取る場合は、PropertyChangedWeakEventListenerや

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ImageTracer.Properties {
+namespace MonitorBlind.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

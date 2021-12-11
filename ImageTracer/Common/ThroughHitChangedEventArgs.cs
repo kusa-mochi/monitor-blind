@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageTracer.Common
+namespace MonitorBlind.Common
 {
     public class ThroughHitChangedEventArgs : EventArgs
     {

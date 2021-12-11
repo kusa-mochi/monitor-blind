@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageTracer.Common
+namespace MonitorBlind.Common
 {
     [StructLayout(LayoutKind.Sequential)]
     internal struct KBDLLHOOKSTRUCT

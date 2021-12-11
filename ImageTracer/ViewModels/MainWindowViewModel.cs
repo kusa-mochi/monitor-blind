@@ -14,11 +14,11 @@ using Livet.Messaging.IO;
 using Livet.EventListeners;
 using Livet.Messaging.Windows;
 
-using ImageTracer.Common;
-using ImageTracer.SystemTray;
-using ImageTracer.Views;
+using MonitorBlind.Common;
+using MonitorBlind.SystemTray;
+using MonitorBlind.Views;
 
-namespace ImageTracer.ViewModels
+namespace MonitorBlind.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {

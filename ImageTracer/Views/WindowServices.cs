@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageTracer.Views
+namespace MonitorBlind.Views
 {
     public static class WindowsServices
     {

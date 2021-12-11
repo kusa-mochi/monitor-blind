@@ -8,7 +8,7 @@ using System.Windows.Input;
 using Livet;
 using Livet.Commands;
 
-namespace ImageTracer.ViewModels
+namespace MonitorBlind.ViewModels
 {
     /// <summary>
     /// ショートカットキー設定ダイアログのVM。

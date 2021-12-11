@@ -7,10 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-using ImageTracer.Views;
-using ImageTracer.ViewModels;
+using MonitorBlind.Views;
+using MonitorBlind.ViewModels;
 
-namespace ImageTracer.SystemTray
+namespace MonitorBlind.SystemTray
 {
     public partial class NotifyIconWrapper : Component
     {

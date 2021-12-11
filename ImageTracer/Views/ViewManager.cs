@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ImageTracer.Views
+namespace MonitorBlind.Views
 {
     public static class ViewManager
     {

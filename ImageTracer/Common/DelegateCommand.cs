@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace ImageTracer.Common
+namespace MonitorBlind.Common
 {
     public class DelegateCommand : ICommand
     {
