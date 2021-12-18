@@ -150,9 +150,6 @@
   <data name="SettingWindowLabel_07" xml:space="preserve">
     <value>Always Displayed in Foreground.</value>
   </data>
-  <data name="SettingWindowLabel_08" xml:space="preserve">
-    <value>Through Mouse Event.</value>
-  </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
     <value>Enables shortcut key to switch show/hide image.</value>
   </data>

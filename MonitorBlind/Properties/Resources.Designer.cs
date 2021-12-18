@@ -160,15 +160,6 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Through Mouse Event. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_08 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_08", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Enables shortcut key to switch show/hide image. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_09 {

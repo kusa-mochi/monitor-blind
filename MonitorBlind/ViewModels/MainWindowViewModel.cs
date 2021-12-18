@@ -89,12 +89,6 @@ namespace MonitorBlind.ViewModels
             }
         }
 
-        #region イベント
-
-        public event EventHandler<ThroughHitChangedEventArgs> ThroughHitChanged;
-
-        #endregion
-
         #region CurrentImage変更通知プロパティ
         private BitmapImage _CurrentImage = null;
 
@@ -128,10 +122,6 @@ namespace MonitorBlind.ViewModels
                 if (_ImageTopmost == value)
                     return;
                 _ImageTopmost = value;
-                if (!value)
-                {
-                    ThroughHit = false;
-                }
                 RaisePropertyChanged();
             }
         }
@@ -264,31 +254,6 @@ namespace MonitorBlind.ViewModels
                 RaisePropertyChanged();
             }
         }
-        #endregion
-
-        #region ThroughHit変更通知プロパティ
-
-        private bool _ThroughHit = false;
-
-        public bool ThroughHit
-        {
-            get
-            {
-                return _ThroughHit;
-            }
-
-            set
-            {
-                if (_ThroughHit == value) return;
-                _ThroughHit = value;
-                if (ThroughHitChanged != null)
-                {
-                    ThroughHitChanged.Invoke(this, new ThroughHitChangedEventArgs { NewValue = value });
-                }
-                RaisePropertyChanged();
-            }
-        }
-
         #endregion
 
         #region IsImageVisible変更通知プロパティ

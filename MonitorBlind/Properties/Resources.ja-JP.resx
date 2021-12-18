@@ -150,9 +150,6 @@
   <data name="SettingWindowLabel_07" xml:space="preserve">
     <value>画像を常に最前面に表示する。</value>
   </data>
-  <data name="SettingWindowLabel_08" xml:space="preserve">
-    <value>マウス操作を透過する。</value>
-  </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
     <value>画像の表示/非表示ショートカットキーを有効にする。</value>
   </data>

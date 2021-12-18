@@ -43,7 +43,6 @@ namespace MonitorBlind.Views
             InitializeComponent();
 
             _vm = ViewModelManager.MainWindowViewModel;
-            _vm.ThroughHitChanged += OnThroughHitChanged;
             _vm.FixRateCommand.ExecuteHandler = FixRateCommandExecute;
             _vm.FixRateCommand.CanExecuteHandler = CanFixRateCommandExecute;
             this.DataContext = _vm;
@@ -68,12 +67,6 @@ namespace MonitorBlind.Views
         {
             // キーボードのコールバックメソッドをアンフックする。
             NativeMethods.UnhookWindowsHookEx(_keyboardHookId);
-        }
-
-        private void OnThroughHitChanged(object sender, ThroughHitChangedEventArgs e)
-        {
-            var hwnd = new WindowInteropHelper(this).Handle;
-            WindowsServices.SetWindowExTransparent(hwnd, e.NewValue);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
