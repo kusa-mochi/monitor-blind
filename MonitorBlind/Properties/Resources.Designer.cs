@@ -106,15 +106,6 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Hold an Aspect Ratio に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_01 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Height に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_02 {

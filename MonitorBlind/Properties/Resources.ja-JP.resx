@@ -132,9 +132,6 @@
   <data name="MenuLabel_03" xml:space="preserve">
     <value>閉じる(_X)</value>
   </data>
-  <data name="SettingWindowLabel_01" xml:space="preserve">
-    <value>画像の縦横比を維持する。</value>
-  </data>
   <data name="SettingWindowLabel_02" xml:space="preserve">
     <value>縦</value>
   </data>

@@ -132,9 +132,6 @@
   <data name="MenuLabel_03" xml:space="preserve">
     <value>Close(_X)</value>
   </data>
-  <data name="SettingWindowLabel_01" xml:space="preserve">
-    <value>Hold an Aspect Ratio</value>
-  </data>
   <data name="SettingWindowLabel_02" xml:space="preserve">
     <value>Height</value>
   </data>

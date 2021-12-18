@@ -107,15 +107,9 @@ namespace MonitorBlind.ViewModels
                 if (_CurrentImage == value)
                     return;
                 _CurrentImage = value;
-                if (HoldAspectRatio)
-                {
-                    _holdRatio = _CurrentImage.Height / _CurrentImage.Width;
-                }
 
-                _sizeInitializing = true;
                 Width = (int)_CurrentImage.Width;
                 Height = (int)_CurrentImage.Height;
-                _sizeInitializing = false;
 
                 RaisePropertyChanged();
             }
@@ -139,28 +133,6 @@ namespace MonitorBlind.ViewModels
                     ThroughHit = false;
                 }
                 RaisePropertyChanged();
-            }
-        }
-        #endregion
-
-        #region HoldAspectRatio変更通知プロパティ
-        private bool _HoldAspectRatio = true;
-
-        public bool HoldAspectRatio
-        {
-            get
-            { return _HoldAspectRatio; }
-            set
-            {
-                if (_HoldAspectRatio == value)
-                    return;
-                _HoldAspectRatio = value;
-                RaisePropertyChanged();
-                if (value)
-                {
-                    FixRateCommand.Execute(null);
-                    _holdRatio = (double)_Height / _Width;
-                }
             }
         }
         #endregion
@@ -217,13 +189,6 @@ namespace MonitorBlind.ViewModels
             {
                 if (_Height == value)
                     return;
-
-                if (_HoldAspectRatio && !_sizeInitializing)
-                {
-                    _Width = (int)((double)value / _holdRatio);
-                    RaisePropertyChanged("Width");
-                }
-
                 _Height = value;
 
                 RaisePropertyChanged("Height");
@@ -242,13 +207,6 @@ namespace MonitorBlind.ViewModels
             {
                 if (_Width == value)
                     return;
-
-                if (_HoldAspectRatio && !_sizeInitializing)
-                {
-                    _Height = (int)((double)value * _holdRatio);
-                    RaisePropertyChanged("Height");
-                }
-
                 _Width = value;
 
                 RaisePropertyChanged("Width");
@@ -503,12 +461,6 @@ namespace MonitorBlind.ViewModels
         /// Height / Width 比
         /// </summary>
         private double _holdRatio = 1.0;
-
-        /// <summary>
-        /// HoldAspectRatioプロパティがtrueのときに，
-        /// WidthまたはHeightを個別に変更する必要がある場合にtrueにする。
-        /// </summary>
-        private bool _sizeInitializing = false;
 
         /// <summary>
         /// ショートカットキー設定ダイアログのVM

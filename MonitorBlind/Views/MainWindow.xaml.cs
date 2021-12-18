@@ -34,7 +34,6 @@ namespace MonitorBlind.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double _fixRate;
         private double _horizontalMargin;
         private double _verticalMargin;
         private MainWindowViewModel _vm = null;
@@ -151,8 +150,6 @@ namespace MonitorBlind.Views
         {
             if (msg == WM_SIZING)
             {
-                if (!_vm.HoldAspectRatio) return IntPtr.Zero;
-
                 // MainWindowの範囲を表す四角形
                 var rect = (RECT)Marshal.PtrToStructure(lParam, typeof(RECT));
 
@@ -163,51 +160,27 @@ namespace MonitorBlind.Views
                 {
                     case WMSZ_LEFT:
                     case WMSZ_RIGHT:
-                        rect.bottom = (int)(rect.top + w / this._fixRate + this._verticalMargin);
+                        rect.bottom = (int)(rect.top + h + this._verticalMargin);
                         break;
                     case WMSZ_TOP:
                     case WMSZ_BOTTOM:
-                        rect.right = (int)(rect.left + h * this._fixRate + this._horizontalMargin);
+                        rect.right = (int)(rect.left + w + this._horizontalMargin);
                         break;
                     case WMSZ_TOPLEFT:
-                        if (w / h > this._fixRate)
-                        {
-                            rect.top = (int)(rect.bottom - w / this._fixRate - this._verticalMargin);
-                        }
-                        else
-                        {
-                            rect.left = (int)(rect.right - h * this._fixRate - this._horizontalMargin);
-                        }
+                        rect.top = (int)(rect.bottom - h - this._verticalMargin);
+                        rect.left = (int)(rect.right - w - this._horizontalMargin);
                         break;
                     case WMSZ_TOPRIGHT:
-                        if (w / h > this._fixRate)
-                        {
-                            rect.top = (int)(rect.bottom - w / this._fixRate - this._verticalMargin);
-                        }
-                        else
-                        {
-                            rect.right = (int)(rect.left + h * this._fixRate + this._horizontalMargin);
-                        }
+                        rect.top = (int)(rect.bottom - h - this._verticalMargin);
+                        rect.right = (int)(rect.left + w + this._horizontalMargin);
                         break;
                     case WMSZ_BOTTOMLEFT:
-                        if (w / h > this._fixRate)
-                        {
-                            rect.bottom = (int)(rect.top + w / this._fixRate + this._verticalMargin);
-                        }
-                        else
-                        {
-                            rect.left = (int)(rect.right - h * this._fixRate - this._horizontalMargin);
-                        }
+                        rect.bottom = (int)(rect.top + h + this._verticalMargin);
+                        rect.left = (int)(rect.right - w - this._horizontalMargin);
                         break;
                     case WMSZ_BOTTOMRIGHT:
-                        if (w / h > this._fixRate)
-                        {
-                            rect.bottom = (int)(rect.top + w / this._fixRate + this._verticalMargin);
-                        }
-                        else
-                        {
-                            rect.right = (int)(rect.left + h * this._fixRate + this._horizontalMargin);
-                        }
+                        rect.bottom = (int)(rect.top + h + this._verticalMargin);
+                        rect.right = (int)(rect.left + w + this._horizontalMargin);
                         break;
                     default:
                         break;
@@ -237,7 +210,6 @@ namespace MonitorBlind.Views
 
             this._horizontalMargin = this.ActualWidth - this.Width;
             this._verticalMargin = this.ActualHeight - this.Height;
-            this._fixRate = this.Width / this.Height;
 
             this.Width = double.NaN;
             this.Height = double.NaN;
