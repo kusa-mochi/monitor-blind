@@ -70,15 +70,6 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Right Click to Open Menu. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string MainWindowLabel_01 {
-            get {
-                return ResourceManager.GetString("MainWindowLabel_01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Open an Image(_O) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MenuLabel_01 {

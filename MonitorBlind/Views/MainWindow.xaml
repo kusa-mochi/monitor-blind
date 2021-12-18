@@ -74,7 +74,6 @@
             ContextMenu="{StaticResource MainContextMenu}"
             Opacity="{Binding Alpha, FallbackValue=0.5}"
             Visibility="{Binding ImageUnloaded, Converter={StaticResource b2v}, FallbackValue=Collapsed, Mode=OneWay}" AllowDrop="True" DragOver="_image_DragOver" Drop="_image_Drop">
-            <TextBlock Text="{x:Static rs:Resources.MainWindowLabel_01}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Foreground="#FFFEFEFE"/>
         </Grid>
     </Grid>
 </Window>

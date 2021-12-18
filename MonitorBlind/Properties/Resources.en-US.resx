@@ -120,9 +120,6 @@
   <data name="KeySettingDialogLabel_01" xml:space="preserve">
     <value>Press the key you want to set as the shortcut.</value>
   </data>
-  <data name="MainWindowLabel_01" xml:space="preserve">
-    <value>Right Click to Open Menu.</value>
-  </data>
   <data name="MenuLabel_01" xml:space="preserve">
     <value>Open an Image(_O)</value>
   </data>

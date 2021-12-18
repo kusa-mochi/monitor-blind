@@ -120,9 +120,6 @@
   <data name="KeySettingDialogLabel_01" xml:space="preserve">
     <value>ショートカットとして設定するキーを押してください。</value>
   </data>
-  <data name="MainWindowLabel_01" xml:space="preserve">
-    <value>右クリックでメニューを開く</value>
-  </data>
   <data name="MenuLabel_01" xml:space="preserve">
     <value>画像を開く(_O)</value>
   </data>
