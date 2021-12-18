@@ -34,8 +34,6 @@ namespace MonitorBlind.Views
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double _horizontalMargin;
-        private double _verticalMargin;
         private MainWindowViewModel _vm = null;
 
         public MainWindow()
@@ -43,8 +41,6 @@ namespace MonitorBlind.Views
             InitializeComponent();
 
             _vm = ViewModelManager.MainWindowViewModel;
-            _vm.FixRateCommand.ExecuteHandler = FixRateCommandExecute;
-            _vm.FixRateCommand.CanExecuteHandler = CanFixRateCommandExecute;
             this.DataContext = _vm;
 
             // キーボードのコールバックメソッドをフックする。
@@ -123,34 +119,34 @@ namespace MonitorBlind.Views
                 // MainWindowの範囲を表す四角形
                 var rect = (RECT)Marshal.PtrToStructure(lParam, typeof(RECT));
 
-                var w = rect.right - rect.left - this._horizontalMargin;
-                var h = rect.bottom - rect.top - this._verticalMargin;
+                var w = rect.right - rect.left;
+                var h = rect.bottom - rect.top;
 
                 switch (wParam.ToInt32())
                 {
                     case WMSZ_LEFT:
                     case WMSZ_RIGHT:
-                        rect.bottom = (int)(rect.top + h + this._verticalMargin);
+                        rect.bottom = (int)(rect.top + h);
                         break;
                     case WMSZ_TOP:
                     case WMSZ_BOTTOM:
-                        rect.right = (int)(rect.left + w + this._horizontalMargin);
+                        rect.right = (int)(rect.left + w);
                         break;
                     case WMSZ_TOPLEFT:
-                        rect.top = (int)(rect.bottom - h - this._verticalMargin);
-                        rect.left = (int)(rect.right - w - this._horizontalMargin);
+                        rect.top = (int)(rect.bottom - h);
+                        rect.left = (int)(rect.right - w);
                         break;
                     case WMSZ_TOPRIGHT:
-                        rect.top = (int)(rect.bottom - h - this._verticalMargin);
-                        rect.right = (int)(rect.left + w + this._horizontalMargin);
+                        rect.top = (int)(rect.bottom - h);
+                        rect.right = (int)(rect.left + w);
                         break;
                     case WMSZ_BOTTOMLEFT:
-                        rect.bottom = (int)(rect.top + h + this._verticalMargin);
-                        rect.left = (int)(rect.right - w - this._horizontalMargin);
+                        rect.bottom = (int)(rect.top + h);
+                        rect.left = (int)(rect.right - w);
                         break;
                     case WMSZ_BOTTOMRIGHT:
-                        rect.bottom = (int)(rect.top + h + this._verticalMargin);
-                        rect.right = (int)(rect.left + w + this._horizontalMargin);
+                        rect.bottom = (int)(rect.top + h);
+                        rect.right = (int)(rect.left + w);
                         break;
                     default:
                         break;
@@ -167,45 +163,6 @@ namespace MonitorBlind.Views
             public int top;
             public int right;
             public int bottom;
-        }
-
-        private void window_Loaded(object sender, RoutedEventArgs e)
-        {
-            this.GetFixRate();
-        }
-
-        private void GetFixRate()
-        {
-            this.SizeToContent = SizeToContent.Manual;
-
-            this._horizontalMargin = this.ActualWidth - this.Width;
-            this._verticalMargin = this.ActualHeight - this.Height;
-
-            this.Width = double.NaN;
-            this.Height = double.NaN;
-        }
-
-        public DelegateCommand FixRateCommand
-        {
-            get
-            {
-                return _vm.FixRateCommand;
-            }
-            set
-            {
-                if (_vm == null) return;
-                _vm.FixRateCommand = value;
-            }
-        }
-
-        private bool CanFixRateCommandExecute(object param)
-        {
-            return param != null;
-        }
-
-        private void FixRateCommandExecute(object param)
-        {
-            this.GetFixRate();
         }
 
         private void window_PreviewKeyDown(object sender, KeyEventArgs e)

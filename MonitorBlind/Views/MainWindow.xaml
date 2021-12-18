@@ -17,7 +17,6 @@
         Height="{Binding Height, Mode=TwoWay, FallbackValue=480}"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         SourceInitialized="window_SourceInitialized"
-        Loaded="window_Loaded"
         PreviewKeyDown="window_PreviewKeyDown"
         Topmost="True"
         >

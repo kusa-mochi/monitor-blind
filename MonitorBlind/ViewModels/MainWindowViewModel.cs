@@ -350,11 +350,6 @@ namespace MonitorBlind.ViewModels
         #endregion
 
         /// <summary>
-        /// Height / Width 比
-        /// </summary>
-        private double _holdRatio = 1.0;
-
-        /// <summary>
         /// ショートカットキー設定ダイアログのVM
         /// </summary>
         private KeySettingDialogViewModel _keySettingDialogViewModel = new KeySettingDialogViewModel();
