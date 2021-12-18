@@ -110,23 +110,6 @@ namespace MonitorBlind.ViewModels
         }
         #endregion
 
-        #region ImageTopmost変更通知プロパティ
-        private bool _ImageTopmost = true;
-
-        public bool ImageTopmost
-        {
-            get
-            { return _ImageTopmost; }
-            set
-            {
-                if (_ImageTopmost == value)
-                    return;
-                _ImageTopmost = value;
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
         #region IsEnableShortcutKey変更通知プロパティ
 
         private bool _IsEnableShortcutKey = false;

@@ -147,9 +147,6 @@
   <data name="SettingWindowLabel_06" xml:space="preserve">
     <value>閉じる</value>
   </data>
-  <data name="SettingWindowLabel_07" xml:space="preserve">
-    <value>画像を常に最前面に表示する。</value>
-  </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
     <value>画像の表示/非表示ショートカットキーを有効にする。</value>
   </data>

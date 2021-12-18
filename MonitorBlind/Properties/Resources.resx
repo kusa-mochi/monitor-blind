@@ -147,9 +147,6 @@
   <data name="SettingWindowLabel_06" xml:space="preserve">
     <value>Close</value>
   </data>
-  <data name="SettingWindowLabel_07" xml:space="preserve">
-    <value>Always Displayed in Foreground.</value>
-  </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
     <value>Enables shortcut key to switch show/hide image.</value>
   </data>

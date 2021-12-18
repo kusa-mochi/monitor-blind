@@ -19,7 +19,8 @@
         SourceInitialized="window_SourceInitialized"
         Loaded="window_Loaded"
         PreviewKeyDown="window_PreviewKeyDown"
-        Topmost="{Binding ImageTopmost}">
+        Topmost="True"
+        >
 
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="{x:Static SystemParameters.CaptionHeight}"

@@ -151,15 +151,6 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Always Displayed in Foreground. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_07 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_07", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Enables shortcut key to switch show/hide image. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_09 {
