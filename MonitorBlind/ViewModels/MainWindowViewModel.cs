@@ -89,27 +89,6 @@ namespace MonitorBlind.ViewModels
             }
         }
 
-        #region CurrentImage変更通知プロパティ
-        private BitmapImage _CurrentImage = null;
-
-        public BitmapImage CurrentImage
-        {
-            get
-            { return _CurrentImage; }
-            set
-            {
-                if (_CurrentImage == value)
-                    return;
-                _CurrentImage = value;
-
-                Width = (int)_CurrentImage.Width;
-                Height = (int)_CurrentImage.Height;
-
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
         #region IsEnableShortcutKey変更通知プロパティ
 
         private bool _IsEnableShortcutKey = false;
@@ -199,41 +178,6 @@ namespace MonitorBlind.ViewModels
                 if ((_Alpha == value) || (value < 0.002))
                     return;
                 _Alpha = value;
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
-        #region ImageLoaded変更通知プロパティ
-        private bool _ImageLoaded = false;
-
-        public bool ImageLoaded
-        {
-            get
-            { return _ImageLoaded; }
-            set
-            {
-                if (_ImageLoaded == value)
-                    return;
-                _ImageLoaded = value;
-                RaisePropertyChanged();
-                ImageUnloaded = !value;
-            }
-        }
-        #endregion
-
-        #region ImageUnloaded変更通知プロパティ
-        private bool _ImageUnloaded = true;
-
-        public bool ImageUnloaded
-        {
-            get
-            { return _ImageUnloaded; }
-            set
-            {
-                if (_ImageUnloaded == value)
-                    return;
-                _ImageUnloaded = value;
                 RaisePropertyChanged();
             }
         }
