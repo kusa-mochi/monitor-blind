@@ -126,17 +126,8 @@
   <data name="MenuLabel_03" xml:space="preserve">
     <value>Close(_X)</value>
   </data>
-  <data name="SettingWindowLabel_02" xml:space="preserve">
-    <value>Height</value>
-  </data>
-  <data name="SettingWindowLabel_03" xml:space="preserve">
-    <value>Width</value>
-  </data>
   <data name="SettingWindowLabel_04" xml:space="preserve">
     <value>Opacity</value>
-  </data>
-  <data name="SettingWindowLabel_05" xml:space="preserve">
-    <value>px</value>
   </data>
   <data name="SettingWindowLabel_06" xml:space="preserve">
     <value>Close</value>

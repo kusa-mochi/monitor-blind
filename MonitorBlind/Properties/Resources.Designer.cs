@@ -88,38 +88,11 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Height に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_02 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Width に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_03 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Opacity に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_04 {
             get {
                 return ResourceManager.GetString("SettingWindowLabel_04", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   px に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_05 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_05", resourceCulture);
             }
         }
         

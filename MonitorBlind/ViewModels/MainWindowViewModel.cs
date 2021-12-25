@@ -130,42 +130,6 @@ namespace MonitorBlind.ViewModels
 
         #endregion
 
-        #region Height変更通知プロパティ
-        private int _Height = 480;
-
-        public int Height
-        {
-            get
-            { return _Height; }
-            set
-            {
-                if (_Height == value)
-                    return;
-                _Height = value;
-
-                RaisePropertyChanged("Height");
-            }
-        }
-        #endregion
-
-        #region Width変更通知プロパティ
-        private int _Width = 640;
-
-        public int Width
-        {
-            get
-            { return _Width; }
-            set
-            {
-                if (_Width == value)
-                    return;
-                _Width = value;
-
-                RaisePropertyChanged("Width");
-            }
-        }
-        #endregion
-
         #region Alpha変更通知プロパティ
         private double _Alpha = 0.5;
 
