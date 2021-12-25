@@ -106,7 +106,7 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Enables shortcut key to switch show/hide image. に類似しているローカライズされた文字列を検索します。
+        ///   Enables shortcut key to switch show/hide blinds. に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_09 {
             get {

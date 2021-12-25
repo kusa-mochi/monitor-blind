@@ -133,7 +133,7 @@
     <value>閉じる</value>
   </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
-    <value>画像の表示/非表示ショートカットキーを有効にする。</value>
+    <value>ブラインドの表示/非表示ショートカットキーを有効にする。</value>
   </data>
   <data name="SettingWindowLabel_10" xml:space="preserve">
     <value>キー選択</value>
