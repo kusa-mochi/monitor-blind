@@ -46,5 +46,29 @@ namespace MonitorBlind.Properties {
                 this["ImageDisplayShortcutKey"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("640")]
+        public double DefaultMainWindowWidth {
+            get {
+                return ((double)(this["DefaultMainWindowWidth"]));
+            }
+            set {
+                this["DefaultMainWindowWidth"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("480")]
+        public double DefaultMainWindowHeight {
+            get {
+                return ((double)(this["DefaultMainWindowHeight"]));
+            }
+            set {
+                this["DefaultMainWindowHeight"] = value;
+            }
+        }
     }
 }

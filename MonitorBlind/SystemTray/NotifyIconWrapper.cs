@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
+using MonitorBlind.Properties;
 using MonitorBlind.Views;
 using MonitorBlind.ViewModels;
 
@@ -22,7 +23,7 @@ namespace MonitorBlind.SystemTray
             this.settingMenuItem.Click += OnSettingMenuItemClick;
             this.quitMenuItem.Click += OnQuitMenuItemClick;
 
-            ViewManager.RequestShowMainWindow();
+            ViewManager.RequestShowMainWindow(Settings.Default.DefaultMainWindowWidth, Settings.Default.DefaultMainWindowHeight);
             ShowBalloonTip();
         }
 
@@ -35,7 +36,7 @@ namespace MonitorBlind.SystemTray
 
         private void OnShowMenuItemClick(object sender, EventArgs e)
         {
-            ViewManager.RequestShowMainWindow();
+            ViewManager.RequestShowMainWindow(Settings.Default.DefaultMainWindowWidth, Settings.Default.DefaultMainWindowHeight);
         }
 
         private void OnSettingMenuItemClick(object sender, EventArgs e)

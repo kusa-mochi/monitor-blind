@@ -126,6 +126,9 @@
   <data name="MenuLabel_03" xml:space="preserve">
     <value>Quit(_X)</value>
   </data>
+  <data name="MenuLabel_04" xml:space="preserve">
+    <value>Duplicate(_C)</value>
+  </data>
   <data name="SettingWindowLabel_04" xml:space="preserve">
     <value>Opacity</value>
   </data>

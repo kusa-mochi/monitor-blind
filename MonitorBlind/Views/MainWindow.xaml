@@ -30,6 +30,7 @@
     <Window.Resources>
         <ContextMenu x:Key="MainContextMenu">
             <MenuItem Header="{x:Static rs:Resources.MenuLabel_02}" Command="{Binding ShowSettingDialogCommand}"/>
+            <MenuItem Header="{x:Static rs:Resources.MenuLabel_04}" Click="DuplicateWindow" />
             <MenuItem x:Name="CloseMenuItem" Header="{x:Static rs:Resources.MenuLabel_03}" Command="{Binding CloseCommand, Mode=OneWay}"/>
         </ContextMenu>
         <BooleanToVisibilityConverter x:Key="b2v"/>
