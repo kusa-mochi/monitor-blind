@@ -70,24 +70,6 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Right Click to Open Menu. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string MainWindowLabel_01 {
-            get {
-                return ResourceManager.GetString("MainWindowLabel_01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Open an Image(_O) に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string MenuLabel_01 {
-            get {
-                return ResourceManager.GetString("MenuLabel_01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Setting(_E) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MenuLabel_02 {
@@ -106,33 +88,6 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   Hold an Aspect Ratio に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_01 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_01", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Height に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_02 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_02", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Width に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_03 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_03", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Opacity に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_04 {
@@ -142,38 +97,11 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
-        ///   px に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_05 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_05", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Close に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_06 {
             get {
                 return ResourceManager.GetString("SettingWindowLabel_06", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Always Displayed in Foreground. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_07 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_07", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Through Mouse Event. に類似しているローカライズされた文字列を検索します。
-        /// </summary>
-        public static string SettingWindowLabel_08 {
-            get {
-                return ResourceManager.GetString("SettingWindowLabel_08", resourceCulture);
             }
         }
         

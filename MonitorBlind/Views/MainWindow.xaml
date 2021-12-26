@@ -13,13 +13,13 @@
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
-        Width="{Binding Width, Mode=TwoWay, FallbackValue=640}"
-        Height="{Binding Height, Mode=TwoWay, FallbackValue=480}"
+        Width="640"
+        Height="480"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
         SourceInitialized="window_SourceInitialized"
-        Loaded="window_Loaded"
         PreviewKeyDown="window_PreviewKeyDown"
-        Topmost="{Binding ImageTopmost}">
+        Topmost="True"
+        >
 
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="{x:Static SystemParameters.CaptionHeight}"
@@ -29,7 +29,6 @@
 
     <Window.Resources>
         <ContextMenu x:Key="MainContextMenu">
-            <MenuItem x:Name="FileOpenMenuItem" Header="{x:Static rs:Resources.MenuLabel_01}" Click="FileOpenMenuItem_Click"/>
             <MenuItem Header="{x:Static rs:Resources.MenuLabel_02}" Command="{Binding ShowSettingDialogCommand}"/>
             <MenuItem x:Name="CloseMenuItem" Header="{x:Static rs:Resources.MenuLabel_03}" Command="{Binding CloseCommand, Mode=OneWay}"/>
         </ContextMenu>
@@ -60,20 +59,12 @@
     </i:Interaction.Triggers>
 
     <Grid Width="Auto" Height="Auto" Visibility="{Binding IsImageVisible, Converter={StaticResource b2v}}">
-        <Image
-            x:Name="_image"
-            Source="{Binding CurrentImage}"
-            ContextMenu="{StaticResource MainContextMenu}"
-            Opacity="{Binding Alpha, FallbackValue=0.5}"
-            Stretch="Fill"
-            Visibility="{Binding ImageLoaded, Converter={StaticResource b2v}, FallbackValue=Visible, Mode=OneWay}" AllowDrop="True" DragOver="_image_DragOver" Drop="_image_Drop"/>
         <Grid
             x:Name="_gridOverImage"
             Background="#FF0070C0"
             ContextMenu="{StaticResource MainContextMenu}"
             Opacity="{Binding Alpha, FallbackValue=0.5}"
-            Visibility="{Binding ImageUnloaded, Converter={StaticResource b2v}, FallbackValue=Collapsed, Mode=OneWay}" AllowDrop="True" DragOver="_image_DragOver" Drop="_image_Drop">
-            <TextBlock Text="{x:Static rs:Resources.MainWindowLabel_01}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Foreground="#FFFEFEFE"/>
+            AllowDrop="True">
         </Grid>
     </Grid>
 </Window>

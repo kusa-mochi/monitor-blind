@@ -89,82 +89,6 @@ namespace MonitorBlind.ViewModels
             }
         }
 
-        #region イベント
-
-        public event EventHandler<ThroughHitChangedEventArgs> ThroughHitChanged;
-
-        #endregion
-
-        #region CurrentImage変更通知プロパティ
-        private BitmapImage _CurrentImage = null;
-
-        public BitmapImage CurrentImage
-        {
-            get
-            { return _CurrentImage; }
-            set
-            {
-                if (_CurrentImage == value)
-                    return;
-                _CurrentImage = value;
-                if (HoldAspectRatio)
-                {
-                    _holdRatio = _CurrentImage.Height / _CurrentImage.Width;
-                }
-
-                _sizeInitializing = true;
-                Width = (int)_CurrentImage.Width;
-                Height = (int)_CurrentImage.Height;
-                _sizeInitializing = false;
-
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
-        #region ImageTopmost変更通知プロパティ
-        private bool _ImageTopmost = true;
-
-        public bool ImageTopmost
-        {
-            get
-            { return _ImageTopmost; }
-            set
-            {
-                if (_ImageTopmost == value)
-                    return;
-                _ImageTopmost = value;
-                if (!value)
-                {
-                    ThroughHit = false;
-                }
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
-        #region HoldAspectRatio変更通知プロパティ
-        private bool _HoldAspectRatio = true;
-
-        public bool HoldAspectRatio
-        {
-            get
-            { return _HoldAspectRatio; }
-            set
-            {
-                if (_HoldAspectRatio == value)
-                    return;
-                _HoldAspectRatio = value;
-                RaisePropertyChanged();
-                if (value)
-                {
-                    FixRateCommand.Execute(null);
-                    _holdRatio = (double)_Height / _Width;
-                }
-            }
-        }
-        #endregion
-
         #region IsEnableShortcutKey変更通知プロパティ
 
         private bool _IsEnableShortcutKey = false;
@@ -206,56 +130,6 @@ namespace MonitorBlind.ViewModels
 
         #endregion
 
-        #region Height変更通知プロパティ
-        private int _Height = 480;
-
-        public int Height
-        {
-            get
-            { return _Height; }
-            set
-            {
-                if (_Height == value)
-                    return;
-
-                if (_HoldAspectRatio && !_sizeInitializing)
-                {
-                    _Width = (int)((double)value / _holdRatio);
-                    RaisePropertyChanged("Width");
-                }
-
-                _Height = value;
-
-                RaisePropertyChanged("Height");
-            }
-        }
-        #endregion
-
-        #region Width変更通知プロパティ
-        private int _Width = 640;
-
-        public int Width
-        {
-            get
-            { return _Width; }
-            set
-            {
-                if (_Width == value)
-                    return;
-
-                if (_HoldAspectRatio && !_sizeInitializing)
-                {
-                    _Height = (int)((double)value * _holdRatio);
-                    RaisePropertyChanged("Height");
-                }
-
-                _Width = value;
-
-                RaisePropertyChanged("Width");
-            }
-        }
-        #endregion
-
         #region Alpha変更通知プロパティ
         private double _Alpha = 0.5;
 
@@ -271,66 +145,6 @@ namespace MonitorBlind.ViewModels
                 RaisePropertyChanged();
             }
         }
-        #endregion
-
-        #region ImageLoaded変更通知プロパティ
-        private bool _ImageLoaded = false;
-
-        public bool ImageLoaded
-        {
-            get
-            { return _ImageLoaded; }
-            set
-            {
-                if (_ImageLoaded == value)
-                    return;
-                _ImageLoaded = value;
-                RaisePropertyChanged();
-                ImageUnloaded = !value;
-            }
-        }
-        #endregion
-
-        #region ImageUnloaded変更通知プロパティ
-        private bool _ImageUnloaded = true;
-
-        public bool ImageUnloaded
-        {
-            get
-            { return _ImageUnloaded; }
-            set
-            {
-                if (_ImageUnloaded == value)
-                    return;
-                _ImageUnloaded = value;
-                RaisePropertyChanged();
-            }
-        }
-        #endregion
-
-        #region ThroughHit変更通知プロパティ
-
-        private bool _ThroughHit = false;
-
-        public bool ThroughHit
-        {
-            get
-            {
-                return _ThroughHit;
-            }
-
-            set
-            {
-                if (_ThroughHit == value) return;
-                _ThroughHit = value;
-                if (ThroughHitChanged != null)
-                {
-                    ThroughHitChanged.Invoke(this, new ThroughHitChangedEventArgs { NewValue = value });
-                }
-                RaisePropertyChanged();
-            }
-        }
-
         #endregion
 
         #region IsImageVisible変更通知プロパティ
@@ -498,17 +312,6 @@ namespace MonitorBlind.ViewModels
         }
 
         #endregion
-
-        /// <summary>
-        /// Height / Width 比
-        /// </summary>
-        private double _holdRatio = 1.0;
-
-        /// <summary>
-        /// HoldAspectRatioプロパティがtrueのときに，
-        /// WidthまたはHeightを個別に変更する必要がある場合にtrueにする。
-        /// </summary>
-        private bool _sizeInitializing = false;
 
         /// <summary>
         /// ショートカットキー設定ダイアログのVM

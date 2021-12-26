@@ -120,41 +120,17 @@
   <data name="KeySettingDialogLabel_01" xml:space="preserve">
     <value>ショートカットとして設定するキーを押してください。</value>
   </data>
-  <data name="MainWindowLabel_01" xml:space="preserve">
-    <value>右クリックでメニューを開く</value>
-  </data>
-  <data name="MenuLabel_01" xml:space="preserve">
-    <value>画像を開く(_O)</value>
-  </data>
   <data name="MenuLabel_02" xml:space="preserve">
     <value>設定(_E)</value>
   </data>
   <data name="MenuLabel_03" xml:space="preserve">
     <value>閉じる(_X)</value>
   </data>
-  <data name="SettingWindowLabel_01" xml:space="preserve">
-    <value>画像の縦横比を維持する。</value>
-  </data>
-  <data name="SettingWindowLabel_02" xml:space="preserve">
-    <value>縦</value>
-  </data>
-  <data name="SettingWindowLabel_03" xml:space="preserve">
-    <value>横</value>
-  </data>
   <data name="SettingWindowLabel_04" xml:space="preserve">
     <value>不透明度</value>
   </data>
-  <data name="SettingWindowLabel_05" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="SettingWindowLabel_06" xml:space="preserve">
     <value>閉じる</value>
-  </data>
-  <data name="SettingWindowLabel_07" xml:space="preserve">
-    <value>画像を常に最前面に表示する。</value>
-  </data>
-  <data name="SettingWindowLabel_08" xml:space="preserve">
-    <value>マウス操作を透過する。</value>
   </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
     <value>画像の表示/非表示ショートカットキーを有効にする。</value>

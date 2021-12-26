@@ -120,41 +120,17 @@
   <data name="KeySettingDialogLabel_01" xml:space="preserve">
     <value>Press the key you want to set as the shortcut.</value>
   </data>
-  <data name="MainWindowLabel_01" xml:space="preserve">
-    <value>Right Click to Open Menu.</value>
-  </data>
-  <data name="MenuLabel_01" xml:space="preserve">
-    <value>Open an Image(_O)</value>
-  </data>
   <data name="MenuLabel_02" xml:space="preserve">
     <value>Setting(_E)</value>
   </data>
   <data name="MenuLabel_03" xml:space="preserve">
     <value>Quit(_X)</value>
   </data>
-  <data name="SettingWindowLabel_01" xml:space="preserve">
-    <value>Hold an Aspect Ratio</value>
-  </data>
-  <data name="SettingWindowLabel_02" xml:space="preserve">
-    <value>Height</value>
-  </data>
-  <data name="SettingWindowLabel_03" xml:space="preserve">
-    <value>Width</value>
-  </data>
   <data name="SettingWindowLabel_04" xml:space="preserve">
     <value>Opacity</value>
   </data>
-  <data name="SettingWindowLabel_05" xml:space="preserve">
-    <value>px</value>
-  </data>
   <data name="SettingWindowLabel_06" xml:space="preserve">
     <value>Close</value>
-  </data>
-  <data name="SettingWindowLabel_07" xml:space="preserve">
-    <value>Always Displayed in Foreground.</value>
-  </data>
-  <data name="SettingWindowLabel_08" xml:space="preserve">
-    <value>Through Mouse Event.</value>
   </data>
   <data name="SettingWindowLabel_09" xml:space="preserve">
     <value>Enables shortcut key to switch show/hide image.</value>
