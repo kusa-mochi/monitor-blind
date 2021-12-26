@@ -73,6 +73,11 @@ namespace MonitorBlind.Views
             this.DragMove();
         }
 
+        private void DuplicateWindow(object sender, RoutedEventArgs e)
+        {
+            ViewManager.RequestShowMainWindow(this.ActualWidth, this.ActualHeight);
+        }
+
         public static BitmapImage FileToBitmapImage(string filePath)
         {
             BitmapImage bi = null;

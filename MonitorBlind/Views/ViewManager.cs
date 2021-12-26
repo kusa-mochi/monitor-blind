@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using MonitorBlind.Properties;
+
 namespace MonitorBlind.Views
 {
     public static class ViewManager
@@ -11,24 +13,28 @@ namespace MonitorBlind.Views
         /// <summary>
         /// メイン画面が表示されていない場合は表示する。
         /// </summary>
-        public static void RequestShowMainWindow()
+        public static void RequestShowMainWindow(double width, double height)
         {
-            // メイン画面が表示されていない場合
-            if (!_isMainWindowVisible)
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Width = width;
+            mainWindow.Height = height;
+            mainWindow.ContentRendered += (sd, ev) =>
             {
-                _mainWindow = new MainWindow();
-                _mainWindow.ContentRendered += (sd, ev) =>
-                {
-                    _isMainWindowVisible = true;
-                };
-                _mainWindow.Closed += (sd, ev) =>
+                _isMainWindowVisible = true;
+            };
+            mainWindow.Closed += (sd, ev) =>
+            {
+                if (_mainWindowList.Count == 0)
                 {
                     _isMainWindowVisible = false;
-                };
+                }
+            };
 
-                // メイン画面を表示する。
-                _mainWindow.Show();
-            }
+            // メイン画面をリストに追加する。
+            _mainWindowList.Add(mainWindow);
+
+            // メイン画面を表示する。
+            mainWindow.Show();
         }
 
         /// <summary>
@@ -36,14 +42,18 @@ namespace MonitorBlind.Views
         /// </summary>
         public static void RequestShowSettingDialog()
         {
-            // メイン画面が表示されていない場合は表示する。
-            RequestShowMainWindow();
+            // メイン画面が表示されていない場合
+            if (!_isMainWindowVisible)
+            {
+                // メイン画面を表示する。
+                RequestShowMainWindow(Settings.Default.DefaultMainWindowWidth, Settings.Default.DefaultMainWindowHeight);
+            }
 
             // 設定画面が表示されていない場合
             if (!_isSettingDialogVisible)
             {
                 SettingDialog settingDialog = new SettingDialog();
-                settingDialog.Owner = _mainWindow;
+                settingDialog.Owner = _mainWindowList[0];
 
                 settingDialog.ContentRendered += (sd, ev) =>
                 {
@@ -60,10 +70,9 @@ namespace MonitorBlind.Views
         }
 
         /// <summary>
-        /// メイン画面。
-        /// 半透明画像を表示するための "枠なし、背景透明" のウィンドウ。
+        /// 表示中のブラインド画面（メイン画面）のインスタンスを保持するためのリスト。
         /// </summary>
-        private static MainWindow _mainWindow = null;
+        private static List<MainWindow> _mainWindowList = new List<MainWindow>();
 
         private static bool _isMainWindowVisible = false;
         private static bool _isSettingDialogVisible = false;

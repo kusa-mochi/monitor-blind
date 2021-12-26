@@ -126,6 +126,9 @@
   <data name="MenuLabel_03" xml:space="preserve">
     <value>閉じる(_X)</value>
   </data>
+  <data name="MenuLabel_04" xml:space="preserve">
+    <value>複製(_C)</value>
+  </data>
   <data name="SettingWindowLabel_04" xml:space="preserve">
     <value>不透明度</value>
   </data>

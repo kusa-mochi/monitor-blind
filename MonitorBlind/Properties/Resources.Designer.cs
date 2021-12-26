@@ -88,6 +88,15 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
+        ///   Duplicate(_C) に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuLabel_04 {
+            get {
+                return ResourceManager.GetString("MenuLabel_04", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Opacity に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowLabel_04 {
