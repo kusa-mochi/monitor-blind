@@ -144,6 +144,9 @@
   <data name="SettingWindowLabel_11" xml:space="preserve">
     <value>現在設定されているキー :</value>
   </data>
+  <data name="SettingWindowLabel_12" xml:space="preserve">
+    <value>ブラインドの移動・拡大縮小操作を有効にする。</value>
+  </data>
   <data name="SettingWindowTitle" xml:space="preserve">
     <value>設定</value>
   </data>

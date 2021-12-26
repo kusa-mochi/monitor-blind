@@ -144,6 +144,9 @@
   <data name="SettingWindowLabel_11" xml:space="preserve">
     <value>Current Key Setting :</value>
   </data>
+  <data name="SettingWindowLabel_12" xml:space="preserve">
+    <value>Enables to move or zoom in/out blinds.</value>
+  </data>
   <data name="SettingWindowTitle" xml:space="preserve">
     <value>Setting</value>
   </data>

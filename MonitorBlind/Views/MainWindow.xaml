@@ -16,7 +16,6 @@
         Width="640"
         Height="480"
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
-        SourceInitialized="window_SourceInitialized"
         PreviewKeyDown="window_PreviewKeyDown"
         Topmost="True"
         >
@@ -28,12 +27,12 @@
     </WindowChrome.WindowChrome>
 
     <Window.Resources>
-        <ContextMenu x:Key="MainContextMenu">
+        <BooleanToVisibilityConverter x:Key="b2v"/>
+        <ContextMenu x:Key="MainContextMenu" Visibility="{Binding isEnabledToMoveOrZoom, Converter={StaticResource b2v}}">
             <MenuItem Header="{x:Static rs:Resources.MenuLabel_02}" Command="{Binding ShowSettingDialogCommand}"/>
             <MenuItem Header="{x:Static rs:Resources.MenuLabel_04}" Click="DuplicateWindow" />
             <MenuItem x:Name="CloseMenuItem" Header="{x:Static rs:Resources.MenuLabel_03}" Command="{Binding CloseCommand, Mode=OneWay}"/>
         </ContextMenu>
-        <BooleanToVisibilityConverter x:Key="b2v"/>
     </Window.Resources>
 
     <i:Interaction.Triggers>
