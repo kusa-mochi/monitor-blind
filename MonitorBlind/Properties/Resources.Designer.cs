@@ -142,6 +142,15 @@ namespace MonitorBlind.Properties {
         }
         
         /// <summary>
+        ///   Enables to move or zoom in/out blinds. に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string SettingWindowLabel_12 {
+            get {
+                return ResourceManager.GetString("SettingWindowLabel_12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Setting に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string SettingWindowTitle {

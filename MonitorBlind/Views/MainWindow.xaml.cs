@@ -41,6 +41,7 @@ namespace MonitorBlind.Views
             InitializeComponent();
 
             _vm = ViewModelManager.MainWindowViewModel;
+            _vm.ChangeIsEnabledToMoveOrZoom += OnChangeIsEnabledToMoveOrZoom;
             this.DataContext = _vm;
 
             // キーボードのコールバックメソッドをフックする。
@@ -67,6 +68,9 @@ namespace MonitorBlind.Views
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
+            // マウス操作が無効の場合は何もしない。
+            if (!_isEnabledToMoveOrZoom) return;
+
             //マウスボタン押下状態でなければ何もしない
             if (e.ButtonState != MouseButtonState.Pressed) return;
 
@@ -76,6 +80,12 @@ namespace MonitorBlind.Views
         private void DuplicateWindow(object sender, RoutedEventArgs e)
         {
             ViewManager.RequestShowMainWindow(this.ActualWidth, this.ActualHeight);
+        }
+
+        private void OnChangeIsEnabledToMoveOrZoom(object sender, bool e)
+        {
+            _isEnabledToMoveOrZoom = e;
+            this.ResizeMode = _isEnabledToMoveOrZoom ? ResizeMode.CanResizeWithGrip : ResizeMode.NoResize;
         }
 
         public static BitmapImage FileToBitmapImage(string filePath)
@@ -101,77 +111,11 @@ namespace MonitorBlind.Views
             return bi;
         }
 
-        private void window_SourceInitialized(object sender, EventArgs e)
-        {
-            var hwndSource = (HwndSource)HwndSource.FromVisual(this);
-            hwndSource.AddHook(WndHookProc);
-        }
-
-        private const int WM_SIZING = 0x214;
-        private const int WMSZ_LEFT = 1;
-        private const int WMSZ_RIGHT = 2;
-        private const int WMSZ_TOP = 3;
-        private const int WMSZ_TOPLEFT = 4;
-        private const int WMSZ_TOPRIGHT = 5;
-        private const int WMSZ_BOTTOM = 6;
-        private const int WMSZ_BOTTOMLEFT = 7;
-        private const int WMSZ_BOTTOMRIGHT = 8;
-
-        private IntPtr WndHookProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
-        {
-            if (msg == WM_SIZING)
-            {
-                // MainWindowの範囲を表す四角形
-                var rect = (RECT)Marshal.PtrToStructure(lParam, typeof(RECT));
-
-                var w = rect.right - rect.left;
-                var h = rect.bottom - rect.top;
-
-                switch (wParam.ToInt32())
-                {
-                    case WMSZ_LEFT:
-                    case WMSZ_RIGHT:
-                        rect.bottom = (int)(rect.top + h);
-                        break;
-                    case WMSZ_TOP:
-                    case WMSZ_BOTTOM:
-                        rect.right = (int)(rect.left + w);
-                        break;
-                    case WMSZ_TOPLEFT:
-                        rect.top = (int)(rect.bottom - h);
-                        rect.left = (int)(rect.right - w);
-                        break;
-                    case WMSZ_TOPRIGHT:
-                        rect.top = (int)(rect.bottom - h);
-                        rect.right = (int)(rect.left + w);
-                        break;
-                    case WMSZ_BOTTOMLEFT:
-                        rect.bottom = (int)(rect.top + h);
-                        rect.left = (int)(rect.right - w);
-                        break;
-                    case WMSZ_BOTTOMRIGHT:
-                        rect.bottom = (int)(rect.top + h);
-                        rect.right = (int)(rect.left + w);
-                        break;
-                    default:
-                        break;
-                }
-                Marshal.StructureToPtr(rect, lParam, true);
-            }
-            return IntPtr.Zero;
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        public struct RECT
-        {
-            public int left;
-            public int top;
-            public int right;
-            public int bottom;
-        }
-
         private void window_PreviewKeyDown(object sender, KeyEventArgs e)
         {
+            // キーボード操作が無効の場合は何もしない。
+            if (!_isEnabledToMoveOrZoom) return;
+
             switch (e.Key)
             {
                 case Key.Left:
@@ -191,6 +135,8 @@ namespace MonitorBlind.Views
                     break;
             }
         }
+
+        private bool _isEnabledToMoveOrZoom = true;
 
         #region アプリ内外でグローバルに有効なイベントハンドラ
 

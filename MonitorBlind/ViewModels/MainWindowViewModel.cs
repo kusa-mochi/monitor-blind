@@ -108,6 +108,27 @@ namespace MonitorBlind.ViewModels
 
         #endregion
 
+        #region isEnabledToMoveOrZoom変更通知プロパティ
+
+        private bool _isEnabledToMoveOrZoom = true;
+        public event EventHandler<bool> ChangeIsEnabledToMoveOrZoom;
+
+        public bool isEnabledToMoveOrZoom
+        {
+            get
+            { return _isEnabledToMoveOrZoom; }
+            set
+            {
+                if (_isEnabledToMoveOrZoom == value)
+                    return;
+                _isEnabledToMoveOrZoom = value;
+                ChangeIsEnabledToMoveOrZoom.Invoke(this, value);
+                RaisePropertyChanged();
+            }
+        }
+
+        #endregion
+
         #region ImageDisplayShortcutKey変更通知プロパティ
 
         /// <summary>
