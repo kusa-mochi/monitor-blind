@@ -82,6 +82,11 @@ namespace MonitorBlind.Views
             ViewManager.RequestShowMainWindow(this.ActualWidth, this.ActualHeight);
         }
 
+        private void CloseWindow(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         private void OnChangeIsEnabledToMoveOrZoom(object sender, bool e)
         {
             _isEnabledToMoveOrZoom = e;

@@ -18,6 +18,7 @@ namespace MonitorBlind.Views
             MainWindow mainWindow = new MainWindow();
             mainWindow.Width = width;
             mainWindow.Height = height;
+            mainWindow.Owner = null;
             mainWindow.ContentRendered += (sd, ev) =>
             {
                 _isMainWindowVisible = true;
