@@ -31,7 +31,7 @@
         <ContextMenu x:Key="MainContextMenu" Visibility="{Binding isEnabledToMoveOrZoom, Converter={StaticResource b2v}}">
             <MenuItem Header="{x:Static rs:Resources.MenuLabel_02}" Command="{Binding ShowSettingDialogCommand}"/>
             <MenuItem Header="{x:Static rs:Resources.MenuLabel_04}" Click="DuplicateWindow" />
-            <MenuItem x:Name="CloseMenuItem" Header="{x:Static rs:Resources.MenuLabel_03}" Command="{Binding CloseCommand, Mode=OneWay}"/>
+            <MenuItem x:Name="CloseMenuItem" Header="{x:Static rs:Resources.MenuLabel_03}" Click="CloseWindow"/>
         </ContextMenu>
     </Window.Resources>
 
