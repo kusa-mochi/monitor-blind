@@ -33,17 +33,17 @@
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.systemTrayContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.showMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quitMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.systemTrayContextMenuStrip.SuspendLayout();
             // 
             // notifyIcon
             // 
             this.notifyIcon.BalloonTipText = "終了する場合はタスクトレイのアイコンを右クリックし、「終了」をクリックしてください。";
-            this.notifyIcon.BalloonTipTitle = "画像半蔵";
+            this.notifyIcon.BalloonTipTitle = "目隠太郎";
             this.notifyIcon.ContextMenuStrip = this.systemTrayContextMenuStrip;
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            this.notifyIcon.Text = "画像半蔵";
+            this.notifyIcon.Text = "目隠太郎";
             this.notifyIcon.Visible = true;
             // 
             // systemTrayContextMenuStrip
@@ -62,17 +62,17 @@
             this.showMenuItem.Size = new System.Drawing.Size(108, 24);
             this.showMenuItem.Text = "表示";
             // 
-            // quitMenuItem
-            // 
-            this.quitMenuItem.Name = "quitMenuItem";
-            this.quitMenuItem.Size = new System.Drawing.Size(108, 24);
-            this.quitMenuItem.Text = "終了";
-            // 
             // settingMenuItem
             // 
             this.settingMenuItem.Name = "settingMenuItem";
             this.settingMenuItem.Size = new System.Drawing.Size(108, 24);
             this.settingMenuItem.Text = "設定";
+            // 
+            // quitMenuItem
+            // 
+            this.quitMenuItem.Name = "quitMenuItem";
+            this.quitMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.quitMenuItem.Text = "終了";
             this.systemTrayContextMenuStrip.ResumeLayout(false);
 
         }
