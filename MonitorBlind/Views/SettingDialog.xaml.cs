@@ -35,5 +35,10 @@ namespace MonitorBlind.Views
         {
             ViewModelManager.MainWindowViewModel.SettingDialogTransitionMessage = null;
         }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

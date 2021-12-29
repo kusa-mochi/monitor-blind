@@ -45,7 +45,7 @@
         </Grid>
         <Grid>
             <StackPanel HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
-                <Button x:Name="CloseButton" Content="{x:Static rs:Resources.SettingWindowLabel_06}" Command="{Binding CloseCommand, Mode=OneWay}" Padding="10,3"/>
+                <Button x:Name="CloseButton" Content="{x:Static rs:Resources.SettingWindowLabel_06}" Padding="10,3" Click="CloseButton_Click"/>
             </StackPanel>
         </Grid>
     </StackPanel>
