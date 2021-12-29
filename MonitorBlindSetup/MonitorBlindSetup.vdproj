@@ -442,9 +442,9 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:目隠太郎"
-        "ProductCode" = "8:{037BBB8A-95C8-4C03-A5E2-B60FDA79D479}"
-        "PackageCode" = "8:{6AC57394-067F-43B7-919F-389F65C0D78A}"
-        "UpgradeCode" = "8:{9FD00F0E-7D66-4CDA-90D7-FDA8E9A1A663}"
+        "ProductCode" = "8:{E545C287-DC9B-4BA5-88A8-3351F9EE7D84}"
+        "PackageCode" = "8:{5BBC0126-A28D-49DE-B1C9-8ED00967D225}"
+        "UpgradeCode" = "8:{7DF0102D-9EDF-484C-9EA9-76E3F0EB1A49}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
