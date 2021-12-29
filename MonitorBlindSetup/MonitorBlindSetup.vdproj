@@ -15,6 +15,12 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_33A375ACC74D4224911750ED44829C50"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_38A7C531D2E546CE8EAFA46221536DFC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -39,7 +45,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_75CA4760AD944DFC8B778E23332F8166"
+        "MsmKey" = "8:_90707018B6404DA6B37AD20C15CDD603"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -216,6 +222,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_33A375ACC74D4224911750ED44829C50"
+            {
+            "SourcePath" = "8:..\\MonitorBlind\\Documents\\取扱説明書へのリンク.url"
+            "TargetName" = "8:取扱説明書へのリンク.url"
+            "Tag" = "8:"
+            "Folder" = "8:_89DB398A7CD0450380C0125227DB304D"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_4D3736FF0940467380CCFFDEEC1A27F9"
             {
             "SourcePath" = "8:..\\LICENSE.rtf"
@@ -267,9 +293,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_75CA4760AD944DFC8B778E23332F8166"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90707018B6404DA6B37AD20C15CDD603"
             {
-            "SourcePath" = "8:..\\ImageTracer\\Documents\\取扱説明書へのリンク.url"
+            "SourcePath" = "8:..\\MonitorBlind\\Documents\\取扱説明書へのリンク.url"
             "TargetName" = "8:取扱説明書へのリンク.url"
             "Tag" = "8:"
             "Folder" = "8:_451EEA37CEC3438889B17B3C6CCCB35B"
@@ -378,7 +404,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_89DB398A7CD0450380C0125227DB304D"
                     {
-                    "Name" = "8:画像半蔵"
+                    "Name" = "8:目隠太郎"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -537,34 +563,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_31966DE69B874FD19CC89B6ED13ED797"
-            {
-            "Name" = "8:画像半蔵"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:32512"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_38A7C531D2E546CE8EAFA46221536DFC"
-            "Folder" = "8:_89DB398A7CD0450380C0125227DB304D"
-            "WorkingFolder" = "8:_451EEA37CEC3438889B17B3C6CCCB35B"
-            "Icon" = "8:_38A7C531D2E546CE8EAFA46221536DFC"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4D69996567094880AE4F54A2D54920A8"
-            {
-            "Name" = "8:取扱説明書へのリンク.url"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_75CA4760AD944DFC8B778E23332F8166"
-            "Folder" = "8:_89DB398A7CD0450380C0125227DB304D"
-            "WorkingFolder" = "8:_451EEA37CEC3438889B17B3C6CCCB35B"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_731BE60D04414E5786F5C8E41DCDEAB1"
             {
             "Name" = "8:LICENSE.rtf"
@@ -579,9 +577,23 @@
             "Icon" = "8:"
             "Feature" = "8:"
             }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A8563CD299EA4E5F91177EAEAC09FDDB"
+            {
+            "Name" = "8:目隠太郎"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_A2745966BF1D41738A281821F7957BC6"
+            "Folder" = "8:_89DB398A7CD0450380C0125227DB304D"
+            "WorkingFolder" = "8:_451EEA37CEC3438889B17B3C6CCCB35B"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F0653FFADB144D0594A7382F35E004B3"
             {
-            "Name" = "8:画像半蔵"
+            "Name" = "8:目隠太郎"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -1297,7 +1309,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_38A7C531D2E546CE8EAFA46221536DFC"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\MonitorBlind\\obj\\Debug\\MonitorBlind.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_451EEA37CEC3438889B17B3C6CCCB35B"
